@@ -1,5 +1,6 @@
 from app import app
-from flask import render_template, abort # noqa
+from flask import Flask, jsonify, render_template, request, session
+from flask import url_for, redirect, abort
 from flask_sqlalchemy import SQLAlchemy  # no more boring old SQL for us!
 import os
 
@@ -14,8 +15,13 @@ import app.models as models # noqa
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html',logged=False)
 
+
+@app.route('/logout', methods=['POST'])
+def logout():
+    session.clear()
+    return redirect(url_for('home'))
 
 if __name__ == "__main__":
     app.run(debug=True)
