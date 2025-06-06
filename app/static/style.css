@@ -5,6 +5,10 @@ body {
     
 }
 
+.page {
+    width: 100vw;
+    height: 93.5vh;
+}
 
 /* navbar background */
 .navbar {
@@ -22,6 +26,7 @@ body {
 
 /* Everything on the navbar*/
 .navitem {
+    background-color: #20221e;
     display: flex;
     margin: 0;
     align-items: center;
@@ -66,4 +71,48 @@ body {
 
 #navplus {
     float: right;
+}
+
+.form-container {
+    position: relative;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    left:30%;
+    top:20%;
+}
+
+
+.textbox {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-size: 0.85em;
+}
+
+.flash.success {
+    margin-top: 10px;
+    color: green;
+    text-align: center;
 }
